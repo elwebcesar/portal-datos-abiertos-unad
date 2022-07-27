@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Portal de Datos Abiertos, Universidad Abierta y a Distancia UNAD de Colombia">
+    <meta name="author" content="Universidad Abierta y a Distancia UNAD de Colombia">
+
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon.png">
+
+    <title>Portal de Datos Abiertos, Universidad Abierta y a Distancia UNAD de Colombia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/unad.css">
+
+    <script src="./js/svg-inject.min.js"></script>
+    <script src="./js/dselect.js"></script>
+</head>
+<body>
+    <!-- HEAD -->
+    <header class="header">
+      <div class="container-xxl">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid align-items-md-end">
+  
+              <a class="navbar-brand" href="#">
+                <img src="./img/unad.svg" alt="Universidad Abierta y a Distancia UNAD de Colombia" title="Ir al inicio ̰" onload="SVGInject(this)" class="logoUnad">
+              </a>
+    
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <!-- MENU -->
+              <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Estudiantes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Caracterización</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./gestion-documental.html">Gestión documental</a>
+                  </li>
+                  <!-- 
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                  -->
+  
+                  <!-- 
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  -->
+                </ul>
+              </div>
+              <!-- end MENU -->
+            </div>
+          </nav>  
+        </div>
+      </div>
+    </header>
+    <!-- end HEAD -->
+
+    <!-- MAIN -->
+    <main>
+      <section class="container-xxl">
+        <div class="section">
+
+          <!-- TITULACION -->
+          <div class="row">
+            <div class="col-12">
+              <div class="title_in">
+                <div class="ico">
+                  <div class="ico__round">
+                    <span class="imag">
+                      <img src="./img/documentos.svg" alt="Gestión documental" />
+                    </span>  
+                  </div>
+                </div>
+                <hgroup class="hgroup">
+                  <h1>Portal de Datos abiertos</h1>
+                  <h2>Gestión documental</h2>
+                </hgroup>
+                <div class="img_title">
+                  <img src="./img/user.svg" alt="ilustraci[on de Datos abiertos" />
+                </div>
+              </div>       
+          </div>
+          <!-- end TITULACION -->
+
+          <div class="row m-0">
+            <div class="col-12 back_white round_2">
+              <form>
+                <div class="row form_dates">
+                  <div class="col-12 col-lg-7">
+
+                    <div class="mb-3">
+                      <label for="core16tiporpt" class="form-label fw-bold">Tipo</label>
+                      <select id="core16tiporpt" name="core16tiporpt" class="form-select">
+                        <option>Estudiantes por nivel de formación</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="core16peraca_chosen" class="form-label fw-bold">Periodo</label>
+                      <select id="core16peraca_chosen" name="core16peraca_chosen" class="form-select">
+                        <option value="">Seleccione el Periodo</option>
+                        <option value="1">2022 I PERIODO 16-02 (1142)</option>
+                        <option value="2">-----</option>
+                        <option value="3">-----</option>
+                        <option value="4">-----</option>
+                        <option value="5">2021 I PERIODO COMPLEMENTARIO 8-03 (953)</option>
+                        <option value="6">-----</option>
+                        <option value="7">-----</option>
+                        <option value="8">-----</option>
+                        <option value="9">2021 I PERIODO 16-01 (951)</option>
+                        <option value="10">2020 II PERIODO 16-06 (766)</option>
+                        <option value="11">2020 II PERIODO COMPLEMENTARIO 8-05 (765)</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="core16nivelformacion" class="form-label fw-bold">Nivel de formación</label>
+                      <select id="core16nivelformacion" name="core16nivelformacion" class="form-select">
+                        <option value="">Seleccione el Nivel de formación</option>
+                        <option value="1">Técnica</option>
+                        <option value="1">Técnología</option>
+                        <option value="2">Profesional</option>
+                        <option value="2">Especialización</option>
+                        <option value="2">Maestria</option>
+                      </select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="csv_separa" class="form-label form-check-inline fw-bold">Separador</label>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" value="," name="csv_separa" id="csv_separa" class="form-check-input">
+                        <label class="form-check-label" for="csv_separa">Coma</label>  
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio" value=";" name="csv_separa" id="csv_separa" class="form-check-input">
+                        <label class="form-check-label" for="csv_separa">Punto y coma</label>  
+                      </div>
+                    </div>
+
+                    <div class="form-check-inline">
+                      <button type="button" class="btn btn-warning btn-lg">GENERAR</button>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg">Limpiar</button>
+
+                    <!--
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="p-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    -->
+                  </div>
+
+                  <div class="col-12 col-lg-5">
+                    <div class="spinner-border text-secondary" role="status">
+                      <span class="visually-hidden">Cargando...</span>
+                    </div>
+                    <div class="result_total">
+                      <h3>Registros totales: 2,563</h3>
+                      <button type="button" id="cmdImprimir" name="cmdImprimir" onclick="imprimeexcel()" class="btn result_total__btn">
+                        Descargar datos
+                        <img src="./img/csv.svg" alt="Descargar datos" class="imgIco"/>
+                        <img src="./img/download.svg" alt="Descargar datos" class="imgDownload" />
+                      </button>                        
+                    </div>
+                    
+                  </div>
+                </div>  
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- end MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-12">
+            <img src="./img/unad2.svg" alt="Universidad Abierta y a Distancia UNAD de Colombia" onload="SVGInject(this)" class="logoUnad" />
+            <p>
+              Sede nacional José Celestino Mutis: Calle 14 sur No. 14 - 23<br/>
+              PBX: <a href="tel:57-60-1-3443700">( +57 601 ) 344 3700</a> Bogotá D.C., Colombia<br/>
+              Línea nacional gratuita desde Colombia: 018000115223<br/>
+              Atención al usuario: <a href="mailto:atencionalusuario@unad.edu.co">atencionalusuario@unad.edu.co</a><br/>
+              Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional
+            </p>  
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end FOOTER -->
+
+    <!-- Accesibilidad -->
+    <div id="accessibility" class="accessibility">
+      <button type="button" id="accessibility__btn" class="accessibility__btn">
+        <img src="./accessibility/accessibility.svg" alt="Accesibilidad">
+      </button>
+
+      <div class="accessibility__controls">
+        <ul>
+          <li>
+            <button id="increaseFont">
+              <img src="./accessibility/icons/acc_more.svg" alt="Aumentar tamaño del texto" class="ico_control">
+              Aumentar
+            </button>
+          </li>
+          <li>
+            <button id="diminishFont">
+              <img src="./accessibility/icons/acc_less.svg" alt="Disminuir tamaño del texto" class="ico_control">
+              Disminuir
+            </button>
+          </li>
+          <li>
+            <button id="btnDarkMode">
+              <img src="./accessibility/icons/acc_contrast.svg" alt="Contraste" class="ico_control">
+              Contraste
+            </button>
+          </li>
+          <li>
+            <button id="reset">
+              <img src="./accessibility/icons/acc_reset.svg" alt="Restablecer" class="ico_control">
+              Restablecer
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- fin Accesibilidad -->
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./accessibility/accessibility.js"></script>
+    <script>
+      const selectPeriodo = document.querySelector('#core16peraca_chosen');
+      dselect(selectPeriodo, {
+        search: true
+      });
+    </script>
+</body>
+</html>

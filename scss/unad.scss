@@ -1,0 +1,309 @@
+@import "functions";
+@import "variables";
+@import "mixins/breakpoints";
+
+
+// ----------------------------------------------------
+// GENERALS
+// ----------------------------------------------------
+
+body, html {
+    overflow-x: hidden !important;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    transition: all 0.2s ease;
+}
+
+
+// ----------------------------------------------------
+// DOOM
+// ----------------------------------------------------
+
+.header {
+    background-color: $white;
+
+    & .container .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    & .navbar-brand img {
+        max-height: 90px;
+    }
+    
+    & .logoUnad {
+        max-width: 333px;
+        height: 90px;
+    }
+
+    & .navbar-toggler {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        // background-image: escape-svg($navbar-light-toggler-icon-bg);
+        // background-image: escape-svg($navbar-dark-toggler-icon-bg);
+        // background-color: $nav-link-color;
+        background-color: $yellow;
+        border-radius: 0;
+    }
+
+    & .nav-link {
+        border-bottom: 1px solid transparent;
+
+        &:hover, &:focus {
+            border-color: $nav-link-color;
+        }
+    }
+}
+
+.section {
+    // margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    & h1.title_1 {
+        display: flex;
+        flex-flow: column;
+        margin: 4rem 0 1.6rem 0;
+        line-height: 2.6rem;
+        
+        & span {
+            font-size: 3.4rem;
+            font-weight: 800;
+        }
+    }
+
+    & .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1.8rem 2.6rem;
+
+        & .row {
+            width: 100%;
+        }
+
+        & a {
+            padding: 1.8rem 0;
+            text-align: center;
+            font-weight: 600;
+            background-color: $gray-100;
+            border-radius: 0.8rem;
+
+            & .imag {
+                display: flex;
+                width: 80px;
+                justify-content: center;
+                margin: 0 auto 1rem auto;
+                padding: 14px;
+                background-color: $yellow;
+                border-radius: 100rem;
+            }
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: $blue;
+
+                & .imag {
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+
+    & img.img_datos {
+        margin-top: -140px;
+    }
+}
+
+
+.footer {
+    & div.col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+            padding-right: 1.5rem;
+            height: 100px;
+        }
+
+        & .logoUnad {
+            margin-right: 1.5rem;
+        }    
+
+        & p {
+            margin: 0;
+            padding: 1rem 0 1.5rem 1.5rem;
+            border-left: 1px solid $gray-400;
+        }
+    }
+}
+
+.title_in {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1rem;
+    width: 100%;
+    max-width: 100%;
+
+    & .ico {
+        display: flex;
+        align-items: flex-end;
+
+        &__round {
+            padding: 1.25rem;
+            background-color: $white;
+            border-radius: 8px 8px 0px 0px;
+
+            & .imag {
+                display: flex;
+                width: 100px;
+                justify-content: center;
+                padding: 0.8rem;
+        
+                background-color: $yellow;
+                border-radius: 100rem;
+        
+                & img {
+                    width: 70px;
+                }
+            }    
+        }
+    }
+
+    & .hgroup {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        padding: 0 2rem 1rem 2rem;
+        flex-grow: 1;
+    }
+
+    & .img_title {
+        display: flex;
+        align-items: flex-end;
+
+        & img {
+            padding-right: 0.5rem;
+            max-height: 180px;
+        }
+    }
+}
+
+.form_dates {
+    padding: 2rem;
+}
+
+.result_total {
+    text-align: center;
+    border: 1px solid $cyan;
+
+    & h3 {
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+        color: $cyan;
+        border-bottom: 1px solid $blue-300;
+    }
+
+    &__btn {
+        margin: 0 auto 1rem auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+        & .imgIco {
+            margin: 1rem 0 0.5rem 0;
+            padding: 1.2rem 1.4rem;
+            background-color: $green;
+            border-radius: 20px;
+        }
+
+        & .imgDownload {
+            padding-bottom: 0.5rem;
+        }
+
+        &:hover, &:focus {
+            & .imgIco {
+                background-color: $blue;
+            }
+
+            & .imgDownload {
+                padding: 0.5rem 0 0 0;
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------------
+// USABLE
+// ----------------------------------------------------
+
+.text-center {
+    text-align: center;
+}
+
+.pd_xy {
+    padding-right: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+    padding-left: calc(var(--#{$variable-prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
+}
+
+.back_white {
+    background-color: $white;
+}
+
+.round_1 {  
+    border-radius: 12px;
+}
+
+.round_2 {  
+    border-radius: 0px 12px 12px 12px;
+}
+
+.hgroup {
+    & h1 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    & h2 {
+        font-weight: 800;
+        font-size: 3.4rem;
+    }
+}
+
+// .row {
+//     border: 1px solid red;
+// }
+
+
+// ----------------------------------------------------
+// AJUST
+// ----------------------------------------------------
+
+.dselect-wrapper button.form-select[type=button] {
+    text-align: left;
+}
+
+.btn-warning {
+    // text-transform: uppercase;
+    color: $blue;
+    font-weight: 600;
+}
+
+form .btn:hover:not(.result_total__btn) {
+    background-color: $orange;
+    border-color: $orange;
+}
+
+@import "accessibility";
+@import "responsive";

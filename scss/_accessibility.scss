@@ -1,0 +1,192 @@
+// ----------------------------------------------------
+// PANEL
+// ----------------------------------------------------
+
+$width-controls: 170px;
+
+.accessibility {
+    position: fixed;
+    z-index: 1000;
+    top: 160px;
+    right: -$width-controls;
+    // right: 0;
+    display: flex;
+    transition: right 0.3s ease;
+
+    & button {
+        border-color:  transparent;
+        transition: all 0.3s ease;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        padding: 2px;
+        border-radius: 40px 0px 0px 40px;
+    }
+
+    &__btn, &__controls {
+        background-color: $yellow;
+    }
+
+    &__controls {
+        width: $width-controls;
+        // width: 0;
+        border-radius: 0px 0px 0px 8px;
+        // transition: width 0.3s ease;
+        background-color: aquamarine;
+
+        & ul {
+            margin: 0;
+            padding: 0 15px;
+            list-style: none;
+
+            & li {
+                border-bottom: 1px solid $yellow-300;
+
+                &:last-child {
+                    border: none;
+                }
+
+                & button {
+                    width: 100%;
+                    padding: 8px 0;
+                    text-align: left;
+                    cursor: pointer;
+                    background-color: transparent;
+
+                    & .ico_control {
+                        margin: 0 6px 2px 0;
+                        width: 14px;
+                        height: 16px;
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover, &:focus {
+                        color: $white;
+
+                        & .ico_control path {
+                            fill: $white !important;
+                        }
+                    }
+
+                    &:disabled {
+                        color: $gray-600 !important;
+                        cursor: inherit;
+
+                        & .ico_control path {
+                            fill: $gray-600 !important;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+
+    &.active {
+        right: 0;
+
+        & .accessibility__controls {
+            width: $width-controls;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// FONT SIZE
+// ----------------------------------------------------
+
+// html {
+//     font-size: 100%;
+// }
+
+// body {
+//     font-size: 1rem;
+// }
+
+// h1 {
+//     font-size: 1.5rem !important;
+// }
+// li {
+//     font-size: 0.9rem;
+// }
+
+.f0 {
+    font-size: 0.8rem;
+}
+.f1 {
+    font-size: 0.9rem;
+}
+.f2 {
+    font-size: 1rem;
+}
+.f3 {
+    font-size: 1.1rem;
+}
+.f4 {
+    font-size: 1.2rem;
+}
+
+
+// ------------------------------------------------------------
+// DARK MODE
+// ------------------------------------------------------------
+
+@mixin dark-color {
+    color: $white;
+}
+@mixin dark-background {
+    background-color: $black;
+}
+
+.dark-mode {
+    @include dark-color;
+    @include dark-background;
+
+    & %heading {
+        @include dark-color;
+    }
+
+    // FOR TEMPLATE
+    & .header, & .back_white, & .section .buttons a, & .title_in .ico__round, .btn {
+        @include dark-background;
+    }
+
+    & .logoUnad path {
+        fill: $white !important;
+    }
+
+    & a, & .nav-link, & .btn {
+        @include dark-color;
+    }
+
+    & .section .buttons a, & .back_white.round_2, .btn {
+        border: 1px solid $white;
+    }
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+        @extend %heading;
+	}
+}
+
+// https://desarrolloweb.com/articulos/herencia-sass-extend.html
+// https://codepen.io/berzley/pen/vMEvjQ
+// https://codepen.io/sasstantrum/pen/pyOqre
+// https://codepen.io/juanvi/pen/BGMPRW
+
+// @for $i from 1 through 3 {
+//     ul:nth-child(3n + #{$i}) {
+//       background-color: red;
+//     }
+// }
+
+// @for $i from 10 through 100{  // Bucle que va de 10 a 100
+//     @if(isMultiple10($i)){    // y por cada numero comprobará si es multiple de 10
+//         h-#{$i}{        // en caso afirmativo creara la clase .spacer-xx
+//             height: 0px + $i; // con un tamaño relativo al numero por el que avanza el bucle
+//         }
+//     }
+// }
+
+// https://www.emm-gfx.net/2016/07/bucle-for-con-sass-o-scss/
