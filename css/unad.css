@@ -24,6 +24,7 @@ img {
   max-height: 90px;
 }
 .header .logoUnad {
+  width: 90%;
   max-width: 333px;
   height: 90px;
 }
@@ -107,6 +108,9 @@ img {
   padding: 1rem 0 1.5rem 1.5rem;
   border-left: 1px solid #ced4da;
 }
+.footer div.col-12 a:hover, .footer div.col-12 a:focus {
+  text-decoration: underline;
+}
 
 .title_in {
   display: flex;
@@ -147,7 +151,7 @@ img {
   align-items: flex-end;
 }
 .title_in .img_title img {
-  padding-right: 0.5rem;
+  padding: 0.5rem 0.5rem 0 0;
   max-height: 180px;
 }
 
@@ -256,7 +260,6 @@ form .btn:hover:not(.result_total__btn) {
 .accessibility__controls {
   width: 170px;
   border-radius: 0px 0px 0px 8px;
-  background-color: aquamarine;
 }
 .accessibility__controls ul {
   margin: 0;
@@ -363,6 +366,10 @@ form .btn:hover:not(.result_total__btn) {
     text-align: center;
     border-color: #dee2e6;
   }
+  .header .navbar-brand {
+    width: 100%;
+    text-align: center;
+  }
   .header .navbar-nav .nav-item:last-child .nav-link {
     border-bottom: none;
   }
@@ -404,6 +411,9 @@ form .btn:hover:not(.result_total__btn) {
   }
 }
 @media (max-width: 575.98px) {
+  .header .navbar-toggler {
+    top: 0;
+  }
   .footer div.col-12 {
     flex-flow: column;
   }
